@@ -16,7 +16,7 @@ Contact Form: Provides a convenient way for visitors to get in touch by submitti
 
 
 Clone the repository to your local machine.
-code(git clone https://github.com/your-username/personal-portfolio.git)
+code(git clone https://github.com/nitesh7488/personal-portfolio.git)
 
 Open the index.html file in a web browser.
 Dependencies
