@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Nitesh Kumar | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 </head>
 <body>
+    <!-- Scroll to Top Button -->
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
+
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#teams1" class="menu-btn">Certificates</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#teams" class="menu-btn">Project</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
+        <div class="nav-container">
+            <div class="logo">Portfo<span>lio.</span></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -35,342 +34,679 @@
         </div>
     </nav>
 
-    <!-- home section start -->
+    <!-- Home Section -->
     <section class="home" id="home">
-        <div class="max-width">
+        <div class="container">
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Nitesh Kumar</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="https://wa.me/919102615343" target="_blank">Contact me on WhatsApp</a>
-
+                <div class="home-buttons">
+                    <a href="#contact" class="btn">Get Your Website</a>
+                    <a href="https://wa.me/919102615343" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Discuss on WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- about section start -->
+    <!-- About Section -->
     <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Full Stack Developer with passion for creating innovative web solutions</p>
+            </div>
             <div class="about-content">
-                <div class="column left">
-                    <img src="./images/www.jpg" alt="">
+                <div class="about-img">
+                    <img src="./images/my.jpeg" alt="Nitesh Kumar">
                 </div>
-                <div class="column right">
-                    <div class="text">I'm Nitesh Kumar and I'm a <span class="typing-2"></span></div>
-                    <p> Hi, I am Nitesh Kumar – a Full Stack Web Developer with an MCA and BCA background, based in Mumbai, India.
-
-I hold a Master of Computer Applications (MCA) from Ajeenkya D. Y. Patil University, Pune (2023–2025) and a Bachelor’s in Computer Applications (BCA) from MITS School of Biotechnology, Bhubaneswar. My strong foundation in computer science and hands-on development experience have helped me evolve into a skilled full stack developer.
-
-My web development journey began with a Full Stack Web Development course at TimesPro Institute, Mumbai, where I gained practical experience with real-world projects and industry-relevant technologies. Since then, I’ve worked on multiple projects ranging from e-commerce platforms to interactive web applications.       </p>
-                    <a href="https://drive.google.com/file/d/11n3jdMGnhihb0WZzjgvYuJrtlyu0vlWA/view?usp=sharing">Download CV</a>
+                <div class="about-text">
+                    <h3>I'm Nitesh Kumar and I'm a <span class="typing-2"></span></h3>
+                    <p>Hi, I am Nitesh Kumar – a Full Stack Web Developer with an MCA and BCA background, based in Mumbai, India. I hold a Master of Computer Applications (MCA) from Ajeenkya D. Y. Patil University, Pune (2023–2025) and a Bachelor's in Computer Applications (BCA) from MITS School of Biotechnology, Bhubaneswar.</p>
+                    <p>My web development journey began with a Full Stack Web Development course at TimesPro Institute, Mumbai, where I gained practical experience with real-world projects and industry-relevant technologies. Since then, I've worked on multiple projects ranging from e-commerce platforms to interactive web applications.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="number">25+</span>
+                            <span class="label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">6</span>
+                            <span class="label">Months Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">2+</span>
+                            <span class="label">Happy Clients in freelance</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://drive.google.com/file/d/1ityq_lzhQGfdMRQ-XmfzYK0_YYZ9rray/view?usp=sharing" class="btn" target="_blank">Download CV</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- services section start -->
-    <section class="teams1" id="teams1">
-        <div class="max-width">
-            <h2 class="title">Certificates</h2>
-            <div class="carousel owl-carousel">
-                <a href="https://docs.google.com/document/d/1zZIbOMhwpKaj6ikZMRv2hmkdQDG79wnIMEA7LJ2X2Hk/edit">
-                <div class="card1">
-                    <div class="box">
-                        <img src="images/Nitesh Kumar1.jpg" alt="">
-                        <div class="text">Timespro Cetificates</div>
-                        
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Website Creation Services</h2>
+                <p>Professional website development services tailored to your needs and budget</p>
+            </div>
+            <div class="services-content">
+                <p>I create professional, responsive websites that help businesses establish their online presence. Whether you need a simple portfolio or a complex web application, I provide customized solutions with modern technologies.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Basic Package -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                </div></a>
-                <a href="https://docs.google.com/document/d/1U4z9BLNBRM8vhrgAryPtMuNETWK4WTIZDTQGlqJCdCs/edit">
-                <div class="card1">
-                    <div class="box">
-                        <img src="images/octanet.png" alt="">
-                        <div class="text">OctaNet Intership</div>
-                        
+                    <h3>Basic Website Package</h3>
+                    <p>Perfect for personal portfolios, small businesses, or startups looking to establish their online presence</p>
+                    <ul class="features">
+                        <li>3-5 Pages Responsive Website</li>
+                        <li>Mobile-Friendly Design</li>
+                        <li>Contact Form Integration</li>
+                        <li>Basic SEO Optimization</li>
+                        <li>Fast Loading Speed</li>
+                        <li>Cross-Browser Compatibility</li>
+                    </ul>
+                    <div class="service-note">
+                        <p><i class="fas fa-comments"></i> Let's discuss pricing and timeline based on your specific requirements</p>
                     </div>
-                </div></a>
-                <a href="https://docs.google.com/document/d/1FkMQMu_U4wT8hVDZmW--pKGythIbCS4xJb3Eh_Dq8iM/edit">
-                <div class="card1">
-                    <div class="box">
-                        <img src="images/great.png" alt="">
-                        <div class="text">Great Learning</div>
-                        
-                    </div>
-                </div></a>
-                
+                    <a href="https://wa.me/919102615343?text=Hi%20Nitesh,%20I'm%20interested%20in%20Basic%20Website%20package" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Discuss on WhatsApp
+                    </a>
+                </div>
 
-                
+                <!-- Professional Package -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Professional Business Website</h3>
+                    <p>Ideal for growing businesses and professional services requiring advanced features and customization</p>
+                    <ul class="features">
+                        <li>5-10 Pages Custom Website</li>
+                        <li>Advanced UI/UX Design</li>
+                        <li>CMS Integration</li>
+                        <li>Advanced SEO Setup</li>
+                        <li>Google Analytics Integration</li>
+                        <li>Performance Optimization</li>
+                        <li>Ongoing Support & Maintenance</li>
+                    </ul>
+                    <div class="service-note">
+                        <p><i class="fas fa-comments"></i> Contact me to discuss features, timeline, and budget for your business website</p>
+                    </div>
+                    <a href="https://wa.me/919102615343?text=Hi%20Nitesh,%20I'm%20interested%20in%20Professional%20Business%20Website" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Discuss on WhatsApp
+                    </a>
+                </div>
+
+                <!-- E-commerce Package -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce Solution</h3>
+                    <p>Complete online store with payment integration, inventory management, and customer features</p>
+                    <ul class="features">
+                        <li>Full E-commerce Setup</li>
+                        <li>Payment Gateway Integration</li>
+                        <li>Product Management System</li>
+                        <li>Order Tracking & Management</li>
+                        <li>Customer Accounts & Profiles</li>
+                        <li>Security & SSL Certificate</li>
+                        <li>Mobile App Ready Design</li>
+                    </ul>
+                    <div class="service-note">
+                        <p><i class="fas fa-comments"></i> Let's discuss your e-commerce requirements and create a tailored solution</p>
+                    </div>
+                    <a href="https://wa.me/919102615343?text=Hi%20Nitesh,%20I'm%20interested%20in%20E-commerce%20Solution" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Discuss on WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- skills section start -->
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Work Experience</h2>
+                <p>My professional journey in web development</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>LogicLite Solutions</h3>
+                        <h4>Full Stack Developer</h4>
+                        <span class="duration">2023 - Present</span>
+                        <ul>
+                            <li>Developed and maintained responsive user interfaces using React.js</li>
+                            <li>Worked closely with backend engineers to integrate Node.js and Express.js APIs</li>
+                            <li>Contributed to MongoDB database design and implemented CRUD operations</li>
+                            <li>Created wireframes and UI mockups in Figma</li>
+                            <li>Followed Agile methodologies and communicated progress daily</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Jenovate</h3>
+                        <h4>Web Developer Intern</h4>
+                        <span class="duration">2022 - 2023</span>
+                        <ul>
+                            <li>Built responsive multi-step forms with real-time validation</li>
+                            <li>Developed interactive front-end features using HTML, CSS, and JavaScript</li>
+                            <li>Created dynamic UI elements like confirmation popups and auto-response emails</li>
+                            <li>Collaborated closely with designers to deliver pixel-perfect layouts</li>
+                            <li>Integrated Google Sheets and Apps Script for backend data handling</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>The DriveSales</h3>
+                        <h4>Full Stack Engineer Intern</h4>
+                        <span class="duration">2021 - 2022</span>
+                        <ul>
+                            <li>Developed SaaS applications with modern UI components</li>
+                            <li>Implemented automated tests using Selenium</li>
+                            <li>Wrote shell scripts for deployment pipelines in cloud environments</li>
+                            <li>Collaborated on software development lifecycle from specification to deployment</li>
+                            <li>Identified and resolved critical issues in production systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
     <section class="skills" id="skills">
-        <div class="max-width">
-            <h2 class="title">My skills</h2>
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <p>Technologies and tools I work with</p>
+            </div>
             <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills & experiences.</div>
-                    <p>Hi, I'm Nitesh Kumar, a Full Stack Web Developer from Mumbai, India. With a passion for coding, I specialize in creating user-friendly websites and dynamic web applications. My expertise includes front-end technologies like HTML, CSS, and JavaScript, along with back-end frameworks like React and Bootstrap. Let's collaborate and bring your web development ideas to life!</p>
-                    <a href="#">Read more</a>
+                <div class="skills-text">
+                    <h3>My creative skills & experiences</h3>
+                    <p>Hi, I'm Nitesh Kumar, a Full Stack Web Developer from Mumbai, India. With a passion for coding, I specialize in creating user-friendly websites and dynamic web applications. My expertise includes front-end technologies like HTML, CSS, and JavaScript, along with back-end frameworks like React and Bootstrap.</p>
+                    <p>I believe in continuous learning and staying updated with the latest technologies to deliver cutting-edge solutions. Let's collaborate and bring your web development ideas to life!</p>
+                    
+                    <div class="skills-categories">
+                        <div class="skill-category">
+                            <h4>Frontend Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Bootstrap</span>
+                                <span class="skill-tag">jQuery</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Backend Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Express.js</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">REST APIs</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Database & Tools</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn">Hire Me</a>
                 </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
+                <div class="skills-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
                             <span>HTML</span>
-                            <span>90%</span>
+                            <span class="percentage">90%</span>
                         </div>
-                        <div class="line html"></div>
+                        <div class="progress-bar">
+                            <div class="progress html"></div>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
+                    <div class="skill-bar">
+                        <div class="skill-info">
                             <span>CSS</span>
-                            <span>90%</span>
+                            <span class="percentage">90%</span>
                         </div>
-                        <div class="line html"></div>
+                        <div class="progress-bar">
+                            <div class="progress css"></div>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
+                    <div class="skill-bar">
+                        <div class="skill-info">
                             <span>JavaScript</span>
-                            <span>80%</span>
+                            <span class="percentage">80%</span>
                         </div>
-                        <div class="line js"></div>
-                    </div>
-
-                      <div class="bars">
-                        <div class="info">
-                            <span>Java</span>
-                            <span>70%</span>
+                        <div class="progress-bar">
+                            <div class="progress js"></div>
                         </div>
-                        <div class="line mysql"></div>
                     </div>
-
-                    <div class="bars">
-                        <div class="info">
+                    <div class="skill-bar">
+                        <div class="skill-info">
                             <span>React</span>
-                            <span>70%</span>
+                            <span class="percentage">70%</span>
                         </div>
-                        <div class="line mysql"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>MySQL</span>
-                            <span>70%</span>
+                        <div class="progress-bar">
+                            <div class="progress react"></div>
                         </div>
-                        <div class="line mysql"></div>
                     </div>
-
-                
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span class="percentage">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress node"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>MongoDB</span>
+                            <span class="percentage">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress mongo"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- teams section start -->
-    <section class="teams" id="teams">
-        <div class="max-width">
-            <h2 class="title">My Project</h2>
-            <div class="carousel owl-carousel">
-                <a href="https://github.com/nitesh7488/Blog_Applications">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/1.jpg" alt="">
-                        <div class="text">Blog_Applications</div>
-                        
-                    </div>
-                </div></a>
-                <a href="https://nitesh7488.github.io/Tic-Tac-Toe-Game/">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/2.png" alt="">
-                        <div class="text">Tic-Tac-Toe-Game</div>
-                        
-                    </div>
-                </div></a>
-                <a href="https://github.com/nitesh7488/Quiz-website">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/3.png" alt="">
-                        <div class="text">Quiz-website</div>
-                        
-                    </div>
-                </div></a>
-                <a href="https://github.com/nitesh7488/resturents">
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/4.png" alt="">
-                            <div class="text">Restaurants</div>
-                            
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p>Some of my recent work and personal projects</p>
+            </div>
+            <div class="projects-carousel">
+                <div class="owl-carousel owl-theme">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="LogicalLite Solutions">
+                        </div>
+                        <div class="project-content">
+                            <h3>LogicalLite Solutions</h3>
+                            <p>Company website with modern UI, responsive design, and interactive features for a software solutions company.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/LogicalLite_Solutions" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </div>
-                </a>
 
-               
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Student Teacher Connect">
+                        </div>
+                        <div class="project-content">
+                            <h3>Student Teacher Connect</h3>
+                            <p>Assessment platform connecting students and teachers with interactive features and real-time communication.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Socket.io</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Student_Teacher-Connect-Assessment" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
 
-                <a href="https://github.com/nitesh7488/Codenet_task1-Coffee_shop-">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/5.png" alt="">
-                        <div class="text">Coffee_shop</div>
-                        
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="CivilGuruji Frontend">
+                        </div>
+                        <div class="project-content">
+                            <h3>CivilGuruji Frontend</h3>
+                            <p>Frontend task implementation with modern design and responsive layout for educational platform.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/CivilGuruji_Frontend_Task" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Blood Bank Management">
+                        </div>
+                        <div class="project-content">
+                            <h3>Blood Bank Management</h3>
+                            <p>Comprehensive system for managing blood donations, inventory tracking, and donor management.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Blood_Bank_management" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://blood-bank-management-1-ttrb.onrender.com/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Calendar Survey">
+                        </div>
+                        <div class="project-content">
+                            <h3>Calendar Survey</h3>
+                            <p>Survey application with calendar integration, response analytics, and real-time data visualization.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Calendar_Survey_Sparrow_Assignment" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://calendar-survey-sparrow-assignment.onrender.com/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Google Mini Search">
+                        </div>
+                        <div class="project-content">
+                            <h3>Google Mini Search</h3>
+                            <p>Lightweight search engine implementation with basic Google-like features and search functionality.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Google_mini_search" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://google-mini-search-1.onrender.com/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="News Website">
+                        </div>
+                        <div class="project-content">
+                            <h3>News Website</h3>
+                            <p>Dynamic news portal with categories, search functionality, and real-time news updates.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Axios</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/news_website" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Currency Converter">
+                        </div>
+                        <div class="project-content">
+                            <h3>Currency Converter</h3>
+                            <p>Time machine currency converter with historical data and real-time exchange rates.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Time_Machine_Currency_Converter" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tic-Tac-Toe Game">
+                        </div>
+                        <div class="project-content">
+                            <h3>Tic-Tac-Toe Game</h3>
+                            <p>Interactive Tic-Tac-Toe game with multiplayer functionality, score tracking, and AI opponent.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Game Logic</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Tic-Tac-Toe-Game" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://nitesh7488.github.io/Tic-Tac-Toe-Game/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 10 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Blog Application">
+                        </div>
+                        <div class="project-content">
+                            <h3>Blog Application</h3>
+                            <p>Full-stack blog platform with rich text editing, user authentication, and comment functionality.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">JWT</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Blog_Applications" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 11 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Java Mini Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Java Mini Project</h3>
+                            <p>Java-based application demonstrating OOP concepts, database connectivity, and practical implementation.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Swing</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">JDBC</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488/Java_mini_project" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 12 -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tour Services">
+                        </div>
+                        <div class="project-content">
+                            <h3>Tour Services</h3>
+                            <p>Tour and travel services platform with booking system, package management, and payment integration.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Payment Gateway</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nitesh7488" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://tour-services-lfyj.onrender.com/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
-
-               <a href="https://blood-bank-management-1-ttrb.onrender.com/">
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/6.png" alt="">
-                            <div class="text">Blood_Bank_management</div>
-                            
-                        </div>
-                    </div>
-                </a>
-
-                   <a href="https://calendar-survey-sparrow-assignment.onrender.com/">
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/7.png" alt="">
-                            <div class="text">calendar-survey-sparrow-assignment</div>
-                            
-                        </div>
-                    </div>
-                </a>
-
-                 <a href="https://google-mini-search-1.onrender.com/">
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/8.png" alt="">
-                            <div class="text">joogle-mini-search</div>
-                            
-                        </div>
-                    </div>
-                </a>
-
             </div>
         </div>
     </section>
 
-    <!-- contact section start -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>Get in touch for collaborations or project discussions</p>
+            </div>
             <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>We genuinely care about you and and your wellbeing. Let us know how we can serve you better.</p>
-                    <div class="icons">
-                        <div class="row">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, and creative ideas. Feel free to reach out if you want to collaborate or just say hello!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
                             <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Nitesh Kumar</div>
+                            <div class="contact-text">
+                                <h4>Name</h4>
+                                <p>Nitesh Kumar</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">Pune</div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>Mumbai, Maharashtra, India</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">Mandalnitesh654@gmail.com</div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>Mandalnitesh654@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91-9102615343</p>
                             </div>
                         </div>
                     </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/nitesh-kumar-615009264/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/nitesh7488" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mandalnitesh_k" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Nitesh-Kr/100015817759002/" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/919102615343" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="column right">
-                    <div class="text">Message me</div>
+                <div class="contact-form">
                     <form id="contactForm">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" id="nameInput" placeholder="Name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
                             </div>
-                            <div class="field email">
-                                <input type="email" id="emailInput" placeholder="Email" required>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
                             </div>
                         </div>
-                        <div class="field">
-                            <input type="text" id="subjectInput" placeholder="Subject" required>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
                         </div>
-                        <div class="field textarea">
-                            <textarea id="messageInput" cols="30" rows="10" placeholder="Message.." required></textarea>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
                         </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                        </div>
+                        <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
-                
-                <script>
-                    document.getElementById("contactForm").addEventListener("submit", function(event) {
-                        event.preventDefault(); // Prevent default form submission
-                        
-                        // Get form values
-                        var name = document.getElementById("nameInput").value;
-                        var email = document.getElementById("emailInput").value;
-                        var subject = document.getElementById("subjectInput").value;
-                        var message = document.getElementById("messageInput").value;
-                        
-                        // Construct email body
-                        var emailBody = "Name: " + name + "\n";
-                        emailBody += "Email: " + email + "\n";
-                        emailBody += "Subject: " + subject + "\n";
-                        emailBody += "Message: " + message;
-                        
-                        // Send email using a mailto link
-                        var mailtoLink = "mailto:mandalnitesh654@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
-                        window.location.href = mailtoLink;
-                    });
-                </script>
-                
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- footer section start -->
-
-    <footer role="contentinfo" class="footer">
-        <div class="row">
-          <ul class="footer__social-links">
-            <!-- Social media links -->
-            <li class="footer__social-link-item">
-              <a href="https://www.instagram.com/mandalnitesh_k?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D"
-                title="Link to Instagram Profile">
-                <img src="./images/instagram-svgrepo-com.svg" class="footer__social-image" alt="Instagram">
-              </a>
-            </li>
-            <li class="footer__social-link-item">
-              <a href="https://github.com/nitesh7488?tab=repositories" title="Link to Github Profile">
-                <img src="./images/github.svg" class="footer__social-image" alt="Github">
-              </a>
-            </li>
-            <li class="footer__social-link-item">
-              <a href="https://www.facebook.com/people/Nitesh-Kr/100015817759002/" title="Link to Facebook Profile">
-                <img src="./images/facebook-svgrepo-com.svg" class="footer__social-image" alt="Facebook">
-              </a>
-            </li>
-            <li class="footer__social-link-item">
-              <a href="https://www.linkedin.com/in/nitesh-kumar-615009264/" title="Link to Linkedin Profile">
-                <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
-              </a>
-            </li>
-          </ul>
-          <!-- Copyright notice -->
-          
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Portfo<span>lio.</span></div>
+                <div class="footer-text">
+                    <p>Created By <a href="#">Nitesh Kumar</a> | <span class="far fa-copyright"></span> 2024 All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nitesh-kumar-615009264/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/nitesh7488" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/mandalnitesh_k" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/people/Nitesh-Kr/100015817759002/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="footer1">
-        <span>Created By <a href="">Nitesh</a> | <span class="far fa-copyright"></span> 2024 All rights reserved.</span>
-        </div>
+    </footer>
 
-      </footer>
-
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
