@@ -185,7 +185,7 @@
                     <div class="timeline-content">
                         <h3>LogicLite Solutions</h3>
                         <h4>Full Stack Developer</h4>
-                        <span class="duration">2023 - Present</span>
+                        <span class="duration">July 2025 - Present</span>
                         <ul>
                             <li>Developed and maintained responsive user interfaces using React.js</li>
                             <li>Worked closely with backend engineers to integrate Node.js and Express.js APIs</li>
@@ -199,7 +199,7 @@
                     <div class="timeline-content">
                         <h3>Jenovate</h3>
                         <h4>Web Developer Intern</h4>
-                        <span class="duration">2022 - 2023</span>
+                        <span class="duration">March 2025 - June 2025</span>
                         <ul>
                             <li>Built responsive multi-step forms with real-time validation</li>
                             <li>Developed interactive front-end features using HTML, CSS, and JavaScript</li>
@@ -213,7 +213,7 @@
                     <div class="timeline-content">
                         <h3>The DriveSales</h3>
                         <h4>Full Stack Engineer Intern</h4>
-                        <span class="duration">2021 - 2022</span>
+                        <span class="duration">May 2024 - July2025</span>
                         <ul>
                             <li>Developed SaaS applications with modern UI components</li>
                             <li>Implemented automated tests using Selenium</li>
@@ -681,6 +681,9 @@
     </div>
 
     <button type="submit" class="btn">Send Message</button>
+
+    <!-- Success + Error Message -->
+    <p id="form-status"></p>
 </form>
 
                 </div>
@@ -712,5 +715,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+const form = document.getElementById("contactForm");
+const statusTxt = document.getElementById("form-status");
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // stop page reload
+
+    statusTxt.innerHTML = "Sending Message... ⏳";
+
+    const formData = new FormData(form);
+
+    fetch("https://formspree.io/f/mldykrqa", {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            statusTxt.innerHTML = "✔ Message Sent Successfully!";
+            form.reset();
+        } else {
+            statusTxt.innerHTML = "❗ Something went wrong — Try again!";
+        }
+    })
+    .catch(() => {
+        statusTxt.innerHTML = "⚠ Network Error — Check Connection!";
+    });
+});
+</script>
+
 </body>
 </html>
