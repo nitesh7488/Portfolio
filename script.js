@@ -1,246 +1,225 @@
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
-    initPortfolio();
-});
+$(document).ready(function() {
+    // Menu Toggle
+    $('.menu-btn').click(function() {
+        $('.nav-menu').toggleClass('active');
+        $('.menu-btn i').toggleClass('active');
+    });
 
-function initPortfolio() {
-    // Sticky Navbar
-    const navbar = document.querySelector('.navbar');
-    const menuBtn = document.querySelector('.menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    const scrollUpBtn = document.querySelector('.scroll-up-btn');
-    
-    // Sticky Navbar on Scroll
-    window.addEventListener('scroll', function() {
-        if (this.scrollY > 20) {
-            navbar.classList.add("sticky");
-            scrollUpBtn.classList.add("show");
+    // Scroll Up Button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('.scroll-up-btn').addClass('show');
         } else {
-            navbar.classList.remove("sticky");
-            scrollUpBtn.classList.remove("show");
-        }
-        
-        // Timeline Animation
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        timelineItems.forEach(item => {
-            if (item.getBoundingClientRect().top < window.innerHeight - 100) {
-                item.classList.add('visible');
-            }
-        });
-        
-        // Animate skill bars when in view
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection.getBoundingClientRect().top < window.innerHeight - 100) {
-            animateSkillBars();
+            $('.scroll-up-btn').removeClass('show');
         }
     });
 
-    // Slide-up Script
-    scrollUpBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    $('.scroll-up-btn').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 500);
     });
 
-    // Toggle Menu/Navbar
-    menuBtn.addEventListener('click', function() {
-        navMenu.classList.toggle("active");
-        menuBtn.querySelector('i').classList.toggle("active");
+    // Navbar Background on Scroll
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('sticky');
+        } else {
+            $('.navbar').removeClass('sticky');
+        }
     });
 
-    // Close Mobile Menu on Link Click
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove("active");
-            menuBtn.querySelector('i').classList.remove("active");
-        });
+    // Smooth Scrolling
+    $('a[href*="#"]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 50
+        }, 500);
+        
+        // Close mobile menu if open
+        $('.nav-menu').removeClass('active');
+        $('.menu-btn i').removeClass('active');
     });
 
     // Typing Animation
-    if (document.querySelector('.typing')) {
-        const typed = new Typed(".typing", {
-            strings: ["Full Stack Developer", "Web Designer", "Software Engineer", "Problem Solver"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        });
-    }
+    var typed = new Typed('.typing', {
+        strings: ['Full Stack Developer', 'Web Developer', 'Freelancer', 'Web Designer'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
 
-    if (document.querySelector('.typing-2')) {
-        const typed2 = new Typed(".typing-2", {
-            strings: ["Full Stack Developer", "Web Designer", "Software Engineer", "Problem Solver"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        });
-    }
+    var typed2 = new Typed('.typing-2', {
+        strings: ['Full Stack Developer', 'Web Developer', 'Freelancer', 'Web Designer'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const subject = this.querySelectorAll('input[type="text"]')[1].value;
-            const message = this.querySelector('textarea').value;
-            
-            // Construct email body
-            const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0ASubject: ${subject}%0D%0AMessage: ${message}`;
-            
-            // Send email using mailto
-            const mailtoLink = `mailto:mandalnitesh654@gmail.com?subject=${encodeURIComponent(subject)}&body=${emailBody}`;
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    }
-
-    // Initialize Owl Carousel
-    if (jQuery('.owl-carousel').length) {
-        jQuery('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplayHoverPause: true,
-            autoplaySpeed: 1000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
-                }
+    // Owl Carousel for Projects
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1200: {
+                items: 3
             }
-        });
-    }
+        },
+        nav: true,
+        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+        dots: true
+    });
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    // Skills Animation on Scroll
+    $(window).scroll(function() {
+        $('.skill-bar').each(function() {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
             
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
+            if (bottom_of_window > bottom_of_object) {
+                $(this).find('.progress').css('width', function() {
+                    return $(this).data('width') || $(this).css('width');
                 });
             }
         });
     });
 
-    // Animate skill bars
-    function animateSkillBars() {
-        const skillBars = document.querySelectorAll('.progress');
-        skillBars.forEach(bar => {
-            const width = bar.style.width;
-            bar.style.width = '0';
-            setTimeout(() => {
-                bar.style.width = width;
-            }, 500);
-        });
-        
-        // Remove event listener after animation
-        window.removeEventListener('scroll', checkSkills);
-    }
-
-    // Check if skills section is in view
-    function checkSkills() {
-        const skillsSection = document.getElementById('skills');
-        if (!skillsSection) return;
-        
-        const skillsTop = skillsSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (skillsTop < windowHeight - 100) {
-            animateSkillBars();
-        }
-    }
-
-    // Initial check for skills animation
-    window.addEventListener('scroll', checkSkills);
-    
-    // Trigger skills animation if already in view on load
-    setTimeout(checkSkills, 1000);
-
-    // Add loading animation
-    window.addEventListener('load', function() {
-        document.body.classList.add('loaded');
+    // Initialize skills width
+    $('.progress').each(function() {
+        var width = $(this).css('width');
+        $(this).data('width', width).css('width', '0');
     });
 
-    // Add intersection observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+    // Form Submission
+    $('#contactForm').submit(function(e) {
+        e.preventDefault();
+        
+        var form = $(this);
+        var formData = form.serialize();
+        
+        $.ajax({
+            type: 'POST',
+            url: form.attr('action'),
+            data: formData,
+            success: function(response) {
+                $('#form-status').text('Message sent successfully!').css('color', 'green');
+                form[0].reset();
+                
+                setTimeout(function() {
+                    $('#form-status').text('');
+                }, 5000);
+            },
+            error: function() {
+                $('#form-status').text('Error sending message. Please try again.').css('color', 'red');
             }
         });
-    }, observerOptions);
-
-    // Observe elements for fade-in animation
-    document.querySelectorAll('.service-card, .project-card, .stat, .skill-category').forEach(el => {
-        observer.observe(el);
     });
 
-    // Add CSS for fade-in animation
-    const style = document.createElement('style');
-    style.textContent = `
-        .service-card,
-        .project-card,
-        .stat,
-        .skill-category {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
+    // Active Nav Link on Scroll
+    $(window).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
         
-        .fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        body.loaded .service-card,
-        body.loaded .project-card,
-        body.loaded .stat,
-        body.loaded .skill-category {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    `;
-    document.head.appendChild(style);
-}
+        $('section').each(function(i) {
+            if ($(this).position().top <= scrollDistance + 100) {
+                $('.nav-menu a.active').removeClass('active');
+                $('.nav-menu a').eq(i).addClass('active');
+            }
+        });
+    });
 
-// Service Worker Registration (optional - for PWA)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-                console.log('ServiceWorker registration successful');
-            })
-            .catch(function(error) {
-                console.log('ServiceWorker registration failed: ', error);
+    // Counter Animation for Stats
+    $('.stat .number').each(function() {
+        var $this = $(this);
+        var countTo = $this.attr('data-count');
+        
+        $({ countNum: 0 }).animate({
+            countNum: countTo
+        }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function() {
+                $this.text(Math.floor(this.countNum) + '+');
+            },
+            complete: function() {
+                $this.text(this.countNum + '+');
+            }
+        });
+    });
+});
+
+
+
+
+$(document).ready(function() {
+    // Menu Toggle
+    $('.menu-btn').click(function() {
+        $('.nav-menu').toggleClass('active');
+    });
+
+    // Typing Animation
+    var typed = new Typed('.typing', {
+        strings: ['Full Stack Developer', 'Web Developer', 'Freelancer', 'Web Designer'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    var typed2 = new Typed('.typing-2', {
+        strings: ['Full Stack Developer', 'Web Developer', 'Freelancer', 'Web Designer'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    // Owl Carousel
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1200: { items: 3 }
+        }
+    });
+
+    // --- NEW COUNTER LOGIC START ---
+    var hasAnimated = false;
+
+    $('.about').waypoint(function() {
+        if (!hasAnimated) {
+            $('.stat .number').each(function() {
+                var $this = $(this);
+                var countTo = parseInt($this.attr('data-count')); // Targets the integer in HTML
+                
+                $({ countNum: 0 }).animate({
+                    countNum: countTo
+                }, {
+                    duration: 2000, // 2 seconds animation
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        // Adds the '+' back manually after the number is finished
+                        if (countTo === 25 || countTo === 2) {
+                            $this.text(this.countNum + "+");
+                        } else {
+                            $this.text(this.countNum);
+                        }
+                    }
+                });
             });
-    });
-}
+            hasAnimated = true; // Ensures it only runs once per page load
+        }
+    }, { offset: '80%' }); // Starts when section is 80% visible
+    // --- NEW COUNTER LOGIC END ---
+});
+
